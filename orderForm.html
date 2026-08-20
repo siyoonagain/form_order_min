@@ -486,7 +486,7 @@ ${
         const order = orders[id];
 
         const shipping = order.total <= 49999 ? 3500 : 0;
-        const finalTotal = order.total + shipping;
+        const finalTotal = order.total + shipping - 1000;
 
         let text = `[민블리 라이브 정산 안내]
 오늘도 함께해 주셔서 감사합니다!
@@ -519,8 +519,8 @@ ${
 
 ${
   shipping === 0
-    ? `[ ${order.total.toLocaleString()}원/무배 ]`
-    : `[ ${finalTotal.toLocaleString()}원/택포 ]`
+    ? `[ ${order.total.toLocaleString()}원/무배/반영/참여댓 ]`
+    : `[ ${finalTotal.toLocaleString()}원/택포/반영/참여댓 ]`
 }
 입금 후 * 성함 / 주소 / 연락처 *를 남겨주세요.
 오늘도 믿고 구매해 주셔서 감사합니다. 
